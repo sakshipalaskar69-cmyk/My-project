@@ -7,7 +7,7 @@ import openpyxl
 
 
 #File Detail Path
-INPUT_FILE = "Attendance1.xlsx"
+INPUT_FILE = "Attendance2.xlsx"
 OUTPUT_DIR = "Attendance_output"
 FIG_DIR = os.path.join(OUTPUT_DIR, "figures")
 os.makedirs(FIG_DIR,exist_ok=True)
@@ -58,7 +58,7 @@ high_scores = df[df['ATTENDANCE_SCORE'] > 50]
 print(high_scores)
 
 #Save Modified Data
-clean_file = os.path.join(OUTPUT_DIR, "cleaned_data.xlsx")
+clean_file = os.path.join(OUTPUT_DIR, "modified.xlsx")
 df.to_excel(clean_file, index=False)
 print(f"\n Cleaned data saved to {clean_file}")
 
